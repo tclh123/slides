@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>2012编程之美全国挑战赛参赛经历</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script src="remark.min.js" type="text/javascript"></script>
+    <style type="text/css" media="screen">
+      /* Slideshow styles */
+      body { font-family: 'Droid Serif', 'sans-serif' }
+      h1, h2, h3 {
+          font-family: 'Yanone Kaffeesatz', 'sans-serif';
+          font-weight: 400;
+          margin-bottom: 0;
+      }
+      h1 { font-size: 2.4em; }
+      h2 { font-size: 2.0em; }
+      h3 { font-size: 1.6em; }
+      ul, ol { list-style-position: inside; }
+
+      .footnote {
+          position: absolute;
+          bottom: 3em;
+      }
+
+      .box { 
+        background-color: #FFFF93; 
+        border-radius: 10px;
+      }
+
+      .menu li { font-size: 42px;  margin-top: 7px; }
+
+      .list li { font-size: 24px;  margin-top: 7px; }
+
+      a, a > code {
+          color: rgb(249, 38, 114);
+          text-decoration: none;
+      }
+      code {
+          color: #2AA1FF;
+      }
+      #slideshow .slide .content code {
+          font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+          font-size: 0.9em;
+          padding: 8px;
+      }
+
+      /* Color */
+
+      .red    { color: #FF4943; }
+      .gray   { color: #787878; }
+      .green  { color: #87A558; }
+      .blue   { color: #41C8F0; }
+      .yellow { color: #DBEC62; }
+    </style>
+  </head>
+  <body>
+    <!-- 
+    我主要介绍 2012编程之美 的 赛制 跟 流程，以及我参加比赛的经验。
+     -->
+    <pre id="source">
+
+class: center, middle
+
+# .red[2012编程之美全国挑战赛]参赛经历
+ 
+ ---
+
+.right[by [李 寒](http://tclh123.com)]
+
+---
+
+name: movie
+
+class: center, middle
+
+<video src="movie.webm" width="700" controls="controls">
+Your browser does not support the video tag.
+</video>
+
+---
+
+class: center, middle
+
+# .red[赛制] & .blue[流程]，
+
+# 以及我参加比赛的.yellow[经验]
+
+---
+
+class: menu
+
+# .red[赛制]
+
+ - .box.blue[初赛]
+  - 游戏SDK公测
+  - 在线提交AI代码
+  - 小组赛积分制，64名出线
+ - .green[决赛]
+  - “5分钟速配”
+  - 题目三选一，2天结对编程
+  - 展台展示，作品答辩
+
+---
+
+# .red[赛制]
+
+## .blue[初赛介绍]
+
+###游戏平台：[Ocean Scream](http://page.renren.com/601329515/note/820505070)
+
+###游戏大体规则：
+
+1. 对战双方各有5艘战舰，生命值均为1000，游戏开始时出现在地图的两边。
+
+2. 地图中有分布对称的小岛，占领小岛可让整个地图的己方战舰回复生命值，占领越多生命值回复越快。
+
+3. 在游戏时间结束前消灭对手全部战舰者胜利。
+
+###比赛形式：
+
+每人根据官方给的SDK，利用其中的API编写一个AI代码（有一个主循环）。
+
+语言可以是`C++`，`C#`或`Java`。
+
+编译后生成一个控制台程序，通过Socket与游戏主程序交互。
+
+---
+
+# .red[赛制]
+
+## .blue[初赛介绍]
+
+###游戏平台：[Ocean Scream](http://page.renren.com/601329515/note/820505070)
+
+###菜单界面：
+
+![菜单界面](OceanScreamMenu.jpg)
+
+---
+
+# .red[赛制]
+
+## .blue[初赛介绍]
+
+###游戏平台：[Ocean Scream](http://page.renren.com/601329515/note/820505070)
+
+###游戏界面：
+
+![游戏界面](OceanScream.jpg)
+
+---
+
+# .red[赛制]
+
+## .blue[初赛介绍]
+
+###游戏平台：[Ocean Scream](http://page.renren.com/601329515/note/820505070)
+
+###伤害公式：
+
+![游戏界面](OceanSceamFunc.jpg)
+
+---
+
+class: menu
+
+# .red[赛制]
+
+## .gray[初赛经验]
+
+ - 良好的代码设计，对API的封装，利用OO
+ - 游戏策略，数学建模
+ - 碰撞检测，计算几何
+
+---
+
+class: menu
+
+# .red[赛制]
+
+ - .blue[初赛]
+  - 游戏SDK公测
+  - 在线提交AI代码
+  - 小组赛积分制，64名出线
+ - .box.green[决赛]
+  - “5分钟速配”
+  - 题目三选一，2天结对编程
+  - 展台展示，作品答辩
+
+---
+
+class: center, middle
+
+<img src="skygarden.jpeg" width="800"></img>
+
+---
+
+class: list
+
+# .red[赛制]
+
+## .blue[决赛介绍]
+
+###.green[主题]：大数据可视化
+
+###.yellow[形式]：结对（2个人）编程，2天时间(Coding <24h)
+
+###.gray[题目]：三选一，
+  
+  - 网站session记录的分析
+  - 字云（Word Cloud）
+  - 基于微软学术搜索的引文系统（`WCF.NET`）
+
+###.red[编程语言、框架]：任选
+
+---
+
+# .red[赛制]
+
+## .blue[决赛介绍]
+
+###.green[字云]：
+
+
+---
+
+# .red[赛制]
+
+## .blue[决赛介绍]
+
+###.green[字云]：
+
+![](WordCloud1.jpg)
+
+---
+
+# .red[赛制]
+
+## .blue[决赛介绍]
+
+###.green[字云]：
+
+![](WordCloud2.png)
+
+---
+
+# .red[赛制]
+
+## .blue[决赛介绍]
+
+###.green[字云]：
+
+<img src="WordCloud3.png" width="600"></img>
+
+---
+
+class: list
+
+# .red[赛制]
+
+## .blue[决赛介绍]
+
+###.green[字云]：
+
+.box[*题目要求*]
+
+ - 若干个task，不同task给你不同数据
+ - 数据量从几百到几千
+ - 要求能实时搜索，并高亮
+ - 多组数据生成多个字云，并用可视化的方式体现他们的差异
+ - 一个字云的演化
+ - ...
+
+---
+
+class: center, middle
+
+<img src="字云.jpg" width="600"></img>
+
+---
+
+class: menu
+
+# .red[赛制]
+
+## .gray[复赛经验]
+
+ - 可以找技术特征互补的人组队
+ - 把握进度，对整个项目有一个大致的计划
+ - 时间非常紧，应该把做出原型放第一位，别在细节处纠结太久
+ - 对题目有疑问及时咨询出题人
+ - 所用算法的复杂度估计
+ - 用到第三方的东西要做说明
+
+---
+
+class: menu
+
+# .green[其他]
+
+## .gray[费用]
+
+ - 提供免费住宿(中关村公馆, 万通驿馆)
+ - 比赛日的全天用餐
+ - 报销往返火车票
+
+.footnote[ *总的来说，比赛后勤还是相当不错的。*]
+
+---
+
+name: last-page
+class: center middle
+
+## Thank you!
+
+    </pre>
+    <div id="slideshow"></div>
+  </body>
+</html>
