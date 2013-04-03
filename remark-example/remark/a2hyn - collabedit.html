@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0027)http://collabedit.com/a2hyn -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" href="http://collabedit.com/static/css/combined_doc.css?v=6375a">
+
+<script type="text/javascript" async="" src="./a2hyn - collabedit_files/ga.js"></script><script src="./a2hyn - collabedit_files/jquery.min.js"></script><style type="text/css"></style>
+
+<title>a2hyn - collabedit</title>
+
+<!--needs to stay in head for webmaster tools-->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-3737184-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script type="text/javascript" src="./a2hyn - collabedit_files/en.js" charset="UTF-8"></script><script type="text/javascript" src="./a2hyn - collabedit_files/python.js" charset="UTF-8"></script><style type="text/css">#yddContainer{display:block;font-family:Microsoft YaHei;position:relative;width:100%;height:100%;top:-4px;left:-4px;font-size:12px;border:1px solid}#yddTop{display:block;height:22px}#yddTopBorderlr{display:block;position:static;height:17px;padding:2px 28px;line-height:17px;font-size:12px;color:#5079bb;font-weight:bold;border-style:none solid;border-width:1px}#yddTopBorderlr .ydd-sp{position:absolute;top:2px;height:0;overflow:hidden}.ydd-icon{left:5px;width:17px;padding:0px 0px 0px 0px;padding-top:17px;background-position:-16px -44px}.ydd-close{right:5px;width:16px;padding-top:16px;background-position:left -44px}#yddKeyTitle{float:left;text-decoration:none}#yddMiddle{display:block;margin-bottom:10px}.ydd-tabs{display:block;margin:5px 0;padding:0 5px;height:18px;border-bottom:1px solid}.ydd-tab{display:block;float:left;height:18px;margin:0 5px -1px 0;padding:0 4px;line-height:18px;border:1px solid;border-bottom:none}.ydd-trans-container{display:block;line-height:160%}.ydd-trans-container a{text-decoration:none;}#yddBottom{position:absolute;bottom:0;left:0;width:100%;height:22px;line-height:22px;overflow:hidden;background-position:left -22px}.ydd-padding010{padding:0 10px}#yddWrapper{color:#252525;z-index:10001;background:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);}#yddContainer{background:#fff;border-color:#4b7598}#yddTopBorderlr{border-color:#f0f8fc}#yddWrapper .ydd-sp{background-image:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)}#yddWrapper a,#yddWrapper a:hover,#yddWrapper a:visited{color:#50799b}#yddWrapper .ydd-tabs{color:#959595}.ydd-tabs,.ydd-tab{background:#fff;border-color:#d5e7f3}#yddBottom{color:#363636}#yddWrapper{min-width:250px;max-width:400px;}</style><script type="text/javascript" src="./a2hyn - collabedit_files/c.js" charset="UTF-8"></script></head>
+<body>
+<div id="header">
+<div id="logos">
+<a id="logotext" href="http://collabedit.com/">collabedit</a><br>
+<a id="subtitle" href="http://collabedit.com/">simple collaborative text</a>
+</div>
+
+
+</div>
+
+<div id="login_info">
+
+<div class="login_info_buttons">
+<a class="loginInfoButton" href="http://collabedit.com/a/login"><img src="./a2hyn - collabedit_files/log_in.png"></a>
+<a class="loginInfoButton" href="http://collabedit.com/a/pricing"><img src="./a2hyn - collabedit_files/sign_up.png"></a>
+</div>
+
+</div>
+
+
+<div id="main">
+
+
+<div id="conn_error" style="display: block; ">
+Your connection has been lost &nbsp;<button id="reconnect">Reconnect</button>
+</div>
+<div id="alert_bar" style="display:none">
+Alert Bar
+</div>
+
+<div id="editor_container">
+<div id="edit_area_text_div">
+<textarea id="the_input" name="the_input" style="display: none; "></textarea><iframe name="frame_the_input" id="frame_the_input" style="border-width: 0px; overflow: hidden; display: inline; width: 936px; height: 420px; " frameborder="0"></iframe>
+</div>
+<div id="sidebar_div">
+<div style="margin-bottom: 10px">
+<p class="chat_label">Programming Language</p>
+<select id="langSelect" style="width:240px"><option value="c">c</option><option value="cpp">c++</option><option value="cs">c#</option><option value="css">css</option><option value="basic">basic</option><option value="html">html</option><option value="java">java</option><option value="js">javascript</option><option value="pas">pascal</option><option value="perl">perl</option><option value="php">php</option><option value="python">python</option><option value="ruby">ruby</option><option value="sql">sql</option><option value="vb">visual basic</option><option value="xml">xml</option><option value="none">plain text</option></select>
+</div>
+<div style="margin-bottom: 10px">
+<p class="chat_label">Collaborators</p>
+<div class="bluediv" id="collaborators_div" style="height: 40px" title="also viewing this document: xingrun, 李寒">xingrun, 李寒</div>
+</div>
+<p class="chat_label">Chat</p>
+<div class="bluediv" id="message_div" style="height: 149px; "><div class="chtmsg"><span class="nickspan">xingrun: </span><span class="normalchat">1．给定两个排好序的数组，假设其中一个地址有足够的空间容纳两个数组的所有元素，不用额外的空间，合并两个数组，合并后数组有序。时间复杂度尽量低</span></div><div class="chtmsg"><span class="nickspan">李寒: </span><span class="italicchat">changed language to c</span></div></div>
+<div>
+<p class="chat_label">Chat Here</p>
+<form id="chat_form">
+<input id="chat_value" type="text" title="chat value" spellcheck="false">
+</form>
+</div>
+
+</div>
+<div style="clear:both"></div>
+</div>
+<!-- stuff that get's absolute positioned can go down here -->
+<div id="docnamediv">
+<span id="docnamespan" style="border: 1px solid black;background-color: #E1F2F9;padding: 3px 15px 4px 15px">a2hyn</span>
+</div>
+<iframe name="dlframe" style="display:none"></iframe>
+<div id="doc_link_bar" class="linkBarText">
+<a href="http://collabedit.com/new">new</a>
+| <a href="http://collabedit.com/download?id=a2hyn" target="dlframe">download</a>
+| <a href="http://collabedit.com/a2hyn/history">history</a>
+| <a id="invite" href="http://collabedit.com/a2hyn#">invite</a>
+</div>
+
+<a id="hide_sb_button" style="position: absolute; right:40px;bottom:30px;" href="" title="hide the sidebar"><img src="./a2hyn - collabedit_files/right.png"></a>
+<a id="show_sb_button" style="display:none;position: absolute; right:40px;bottom:30px;" href="" title="show the sidebar"><img src="./a2hyn - collabedit_files/left.png"></a>
+
+
+</div>
+<div id="footer">
+© 2012 <a href="http://collabedit.com/">collabedit.com</a>
+| <a href="http://collabedit.com/about">about</a>
+| <a href="http://collabedit.com/faq">faq</a>
+| <a href="http://collabedit.com/help">help</a>
+| <a href="http://twitter.com/collabedit">twitter</a>
+| <a href="http://collabedit.uservoice.com/">feedback</a>
+| <a href="http://collabedit.com/legal">legal</a>
+</div>
+<script>
+function fix_active_tab() {
+var url = document.location.toString().toLowerCase();
+$("#tabs li").each(function () {
+var anchor = $(this).children("a");
+var tab_url = $.trim(anchor[0]["href"].toLowerCase());
+var end_of_tab = tab_url.substring(tab_url.lastIndexOf('/') + 1)
+var end_of_url = url.substring(url.lastIndexOf('/') + 1)
+if(end_of_tab === end_of_url) {
+$(this).html($(this).text());// remove anchor
+$(this).addClass("activetab");
+};
+});
+}
+$(document).ready(function() {
+fix_active_tab();
+});
+</script>
+
+<script>
+var sidebar_visible = true;
+var cuid = 2132115;
+var guid = "a2hyn";
+var isNoQuestionYet = false;
+var nickname = "unknown";
+var docName = "a2hyn";
+</script>
+<script src="./a2hyn - collabedit_files/jquery.min.js"></script>
+<script src="./a2hyn - collabedit_files/edit_area_loader.js"></script>
+<script src="./a2hyn - collabedit_files/all_scripts.js"></script>
+<script src="./a2hyn - collabedit_files/combined_doc.js"></script>
+
+
+
+</body></html>

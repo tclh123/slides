@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>国创中期答辩</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script src="Js/remark.min.js" type="text/javascript">
+      {"highlightStyle": "monokai"}
+    </script>
+    <script type="text/javascript">
+      var hljs = remark.highlighter.engine();
+    </script>
+    <style type="text/css" media="screen">
+
+      body { font-family: 'Droid Serif', 'sans-serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz', 'sans-serif';
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+      h1 { font-size: 2.4em; }
+      h2 { font-size: 2em; }
+      h3 { font-size: 1.6em; }
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+      }
+      li p { line-height: 1.25em; }
+      .red { color: #fa0000; }
+      .large2 { font-size: 1.5em; }
+      .large { font-size: 2em; }
+      a, a > code {
+        color: rgb(249, 38, 114);
+        text-decoration: none;
+      }
+      code {
+        -moz-border-radius: 5px;
+        -web-border-radius: 5px;
+        background: #e7e8e2;
+        border-radius: 5px;
+      }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #777872;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+      #slide-how .slides {
+        font-size: 0.9em;
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        color: #777;
+        width: 20%;
+        height: 92%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column {
+        width: 75%;
+        float: right;
+        padding-top: 2em;
+      }
+
+      /* Color */
+
+      .red    { color: #FF4943; }
+      .gray   { color: #787878; }
+      .green  { color: #87A558; }
+      .blue   { color: #41C8F0; }
+      .yellow { color: #DBEC62; }
+
+      /**/
+
+      .one-column {
+        color: #777;
+        /*width: 20%;*/
+        /*height: 92%;*/
+        /*float: left;*/
+      }
+        .one-column li:last-of-type, .one-column li:last-child {
+          font-size: 1.5em;
+          color: #000;
+        }
+
+      .padding-top {
+        padding-top: 2em;
+      }        
+
+    </style>    
+
+  </head>
+  <body>
+    <!-- 
+    国创中期答辩：简要汇报项目进展情况、研究是否按计划完成、目前所获成果、存在问题等内容
+     -->
+    <pre id="source">
+
+class: center, middle
+
+# .red[基于增强现实的第六媒体阅读系统]
+
+#中期答辩
+ 
+ ---
+
+团队成员：李 寒  武临风  温江涛
+
+---
+
+name: intro-1
+
+#项目简介
+
+ ---
+
+.one-column[
+
+- ARReading是一个基于增强现实技术（.green[AR]）的阅读系统。
+
+]
+
+---
+
+name: intro-2
+
+#项目简介
+
+ ---
+
+.one-column[
+
+- ARReading是一个基于增强现实技术（.green[AR]）的阅读系统。
+
+- 团队希望在.blue[传统纸质媒体]与.blue[电子媒体]间寻求一种虚实结合的“第六媒体”。融汇纸质媒体与.blue[电子媒体]的优点，将虚拟增强信息（3D模型，图片，视音频等）在纸质媒体上无缝展现出来，从而达到更好的阅读体验以及全新的交互感受。
+
+]
+
+---
+
+name: intro-3
+
+#项目简介
+
+ ---
+
+.one-column[
+
+- ARReading是一个基于增强现实技术（.green[AR]）的阅读系统。
+
+- 团队希望在.blue[传统纸质媒体]与.blue[电子媒体]间寻求一种虚实结合的“第六媒体”。融汇纸质媒体与.blue[电子媒体]的优点，将虚拟增强信息（3D模型，图片，视音频等）在纸质媒体上无缝展现出来，从而达到更好的阅读体验以及全新的交互感受。
+
+- 系统采用云加端的形式，移动端识别、跟踪.red[二维码]进行页面的确定及.green[AR]的配准，并从云端获取素材用于增强。团队目前已基本完成了多个平台的移动端开发，包括`Web(HTML5)` 、`iOS`、`Android、Windows 8`。
+
+]
+
+---
+
+name: intro-4
+
+#项目简介
+
+ ---
+
+.one-column[
+
+- ARReading是一个基于增强现实技术（.green[AR]）的阅读系统。
+
+- 团队希望在.blue[传统纸质媒体]与.blue[电子媒体]间寻求一种虚实结合的“第六媒体”。融汇纸质媒体与.blue[电子媒体]的优点，将虚拟增强信息（3D模型，图片，视音频等）在纸质媒体上无缝展现出来，从而达到更好的阅读体验以及全新的交互感受。
+
+- 系统采用云加端的形式，移动端识别、跟踪.red[二维码]进行页面的确定及.green[AR]的配准，并从云端获取素材用于增强。团队目前已基本完成了多个平台的移动端开发，包括Web(HTML5) 、iOS、Android、Windows 8。
+
+- 另外，团队将进一步完善ARReading的网络平台，使用户可以自由定制纸质页面与虚拟增强物体的关联。
+
+]
+
+---
+
+#汇报内容
+
+ ---
+
+.large[
+
+- 项目进展情况
+
+- 项目内容调整
+
+- 目前所获成果及是否按计划完成
+
+- 目前存在问题
+]
+
+---
+
+#项目进展情况
+
+ ---
+
+.one-column[
+
+- 截止目前，本团队已初步完成项目，学习了国内外增强现实.red[算法]，根据项目情况提出了高效率高质量的项目解决方案并予以实践，完成了项目的关键实现步骤及初步模型，目前正在努力将其实现为可用性强、覆盖范围广的平台产品。
+]
+
+---
+
+#项目进展情况
+
+ ---
+
+.one-column[
+
+- 截止目前，本团队已初步完成项目，学习了国内外增强现实.red[算法]，根据项目情况提出了高效率高质量的项目解决方案并予以实践，完成了项目的关键实现步骤及初步模型，目前正在努力将其实现为可用性强、覆盖范围广的平台产品。
+
+- 自立项以来，团队循序渐进地按计划开展工作。在.red[算法]方面，研究了多种图像处理、识别.red[算法]，并改进了原有.green[AR]（注：增强现实，下同）应用使用的轮廓提取.red[算法]；研究了仿射变换、单应性矩阵(`Homography`)及其求解方法；研究了采用`Levenberg-Marquardt(LM)`优化迭代方法对变换矩阵进行矫正以排除摄像头内参的影响；研究了使用变换矩阵进行三维配准的若干方法及实现细节。
+
+]
+
+---
+
+#项目进展情况
+
+ ---
+
+.one-column[
+
+- 截止目前，本团队已初步完成项目，学习了国内外增强现实.red[算法]，根据项目情况提出了高效率高质量的项目解决方案并予以实践，完成了项目的关键实现步骤及初步模型，目前正在努力将其实现为可用性强、覆盖范围广的平台产品。
+
+- 自立项以来，团队循序渐进地按计划开展工作。在.red[算法]方面，研究了多种图像处理、识别.red[算法]，并改进了原有.green[AR]（注：增强现实，下同）应用使用的轮廓提取.red[算法]；研究了仿射变换、单应性矩阵(`Homography`)及其求解方法；研究了采用`Levenberg-Marquardt(LM)`优化迭代方法对变换矩阵进行矫正以排除摄像头内参的影响；研究了使用变换矩阵进行三维配准的若干方法及实现细节。
+
+- 在.blue[系统实现]方面，团队学习了`HTML 5`、`Windows Phone/C#.NET`、`Android/Java`、`iOS/Objective-C`、`OpenGL ES 2.0`、`Three.Js`等，并进行了相关开发实践。
+
+]
+
+---
+
+#项目内容调整
+
+ ---
+
+.left-column[
+
+##书面排版
+
+]
+
+.right-column[
+
+最初项目原希望直接根据书面印刷的.red[排版]来进行识别并三维配准，但是经过尝试，发现不可行，理由如下：
+
+.large2[
+
+- 对整页.red[排版]进行图像处理后，难以生成规则的形状。每一图像帧已经包含旋转平移的影响因素，处理后的.red[排版]（摄像头坐标）跟实际预处理的.red[排版]（物体坐标）并非原来的仿射变换。
+- 移动设备的屏幕尺寸难以囊括整个页面，不方便阅读。
+- 简单的轮廓提取得到的只是屏幕上的2D坐标，无法进行三维注册。
+]
+]
+
+---
+
+#项目内容调整
+
+ ---
+
+.left-column[
+
+##书面排版
+
+##QR码
+
+]
+
+.right-column[
+
+.large2[
+
+项目希望能够直接支持普通QR码充当AR Marker，以提高应用的普适性。
+
+但是考虑到现有.red[二维码]识别.red[算法]的效率可能难以支持实时的.green[AR]（需要较高的FPS），我们后续将进行一些尝试。
+]
+
+*除此之外，基于AR Marker的.green[AR]阅读应用将按原计划进行。*
+
+]
+
+---
+
+#目前所获成果及是否按计划完成
+
+ ---
+
+.left-column[
+
+##计划
+]
+
+.right-column.large2[
+
+目前项目总体按原定计划进行，下一步我们将重点完善`HTML5`及`iOS`平台上的.green[AR]阅读应用，项目将按时结题。
+]
+
+---
+
+#目前所获成果及是否按计划完成
+
+ ---
+
+.left-column[
+
+##计划
+
+##目前所获成果
+
+]
+.right-column.large2[
+
+截止目前，本团队已将项目核心功能及.red[算法]完成，并将其实践在了`Web（HTML 5）`、`Windows Phone`、`Windows 8（HTML 5）`、`Android`、`iOS`等平台上。接下来我们将做进一步的细化完善，并重点完成`HTML5`及`iOS`平台上的应用开发。
+]
+
+---
+
+#目前存在问题
+
+ ---
+
+.padding-top[
+
+###项目已经能提供较好的阅读体验，但是实用性方面有待提高，使用场景需要进一步挖掘、斟酌。
+]
+---
+
+name: movie
+
+# 视频演示
+
+ ---
+
+.center[
+
+<video src="Data/Imagine_Cup_ARReading.mp4" width="700" controls="controls">
+Your browser does not support the video tag.
+</video>
+]
+
+---
+
+name: last-page
+class: center middle
+
+## Thank you!
+
+    </pre>
+    <div id="slideshow"></div>
+  </body>
+</html>
