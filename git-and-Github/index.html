@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>git & github</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script src="Js/remark.min.js" type="text/javascript">
+      {"highlightStyle": "monokai"}
+    </script>
+    <script type="text/javascript">
+      var hljs = remark.highlighter.engine();
+    </script>
+    <style type="text/css" media="screen">
+      /*@import url(http://fonts.googleapis.com/css?family=Ubuntu+Condensed);*/
+
+      body { 
+        font-family: 'Ubuntu Condensed', 'Droid Serif', 'sans-serif'; 
+        font-size: 32px;
+      }
+/*      h1, h2, h3 {
+        font-family: 'Ubuntu Condensed', 'Yanone Kaffeesatz', 'sans-serif';
+        font-weight: 400;
+        margin-bottom: 0;
+      }*/
+/*      h1 { font-size: 2.4em; }
+      h2 { font-size: 2em; }
+      h3 { font-size: 1.6em; }*/
+
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+      }
+      li {
+        margin-top: 1em;
+      }
+      li p { line-height: 1.25em; }
+      .red { color: #fa0000; }
+      .large2 { font-size: 1.5em; }
+      .large { font-size: 2em; }
+      a, a > code {
+        /*color: rgb(249, 38, 114);*/
+        color: #41C8F0; /*blue*/
+        text-decoration: none;
+      }
+      code {
+        -moz-border-radius: 5px;
+        -web-border-radius: 5px;
+        background: #e7e8e2;
+        border-radius: 5px;
+      }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content { 
+/*        background: url(http://romnes.github.io/images/github.png) no-repeat top right; */
+        padding: 1em 3em;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #777872;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        color: #777;
+        width: 30%;
+        height: 92%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column {
+        width: 75%;
+        float: right;
+        padding-top: 2em;
+      }
+
+      /* Color */
+
+      .red    { color: #FF4943; }
+      .gray   { color: #787878; }
+      .green  { color: #87A558; }
+      .blue   { color: #41C8F0; }
+      .yellow { color: #DBEC62; }
+
+      /**/
+
+      .one-column {
+        color: #777;
+        /*width: 20%;*/
+        /*height: 92%;*/
+        /*float: left;*/
+      }
+        .one-column li:last-of-type, .one-column li:last-child {
+          font-size: 1.5em;
+          color: #000;
+        }
+
+      .padding-top {
+        padding-top: 2em;
+      }        
+
+    </style>    
+
+  </head>
+  <body>
+    <!-- 
+    git & github
+     -->
+    <pre id="source">
+
+class: center, middle
+
+# .red[git & github]
+
+.left.footnote[by [Harry Lee](http://tclh123.com)]
+
+---
+
+class: center, middle
+
+##git ≠ github
+
+---
+
+#git
+
+![](Data/git.png)
+
+---
+
+#git
+
+
+---
+
+#git
+
+.one-column[
+
+- 开源
+
+]
+
+---
+
+#git
+
+.one-column[
+
+- 开源
+- 版本控制
+
+]
+
+---
+
+#git
+
+.one-column[
+
+- 开源
+- 版本控制
+- 分布式
+
+]
+
+---
+
+#Set Up Git
+
+.left-column[
+  
+  ##下载
+
+]
+
+.right-colume[
+
+  - git官方网站
+
+  http://git-scm.com/downloads
+  
+  - msysGit —— git for windows
+
+  https://github.com/msysgit/
+
+]
+
+---
+
+#Set Up Git
+
+.left-column[
+  
+  ##下载
+
+  ##安装
+
+]
+
+.right-colume[
+
+  以Windows为例，演示安装
+
+]
+
+---
+
+#Set Up Git
+
+.left-column[
+  
+  ##下载
+
+  ##安装
+
+  ##配置
+
+]
+
+.right-colume[
+
+  运行Git Bash，
+
+  - 用户名
+
+        git config --global user.name "Your Name Here"
+  
+  - 邮箱
+
+        git config --global user.email "your_email@example.com"
+
+]
+
+---
+
+---
+
+#命令列表
+
+- git init
+- git clone
+- git remote add 
+- git add
+- git rm
+- git commit -a -m "xxx"
+- git push origin master 
+- git pull
+
+#进阶
+
+- git branch
+- git checkout [-b]
+- git merge
+- git diff
+- git log
+- git tag <tag> <commit ID>
+
+---
+
+name: last-page
+class: center middle
+
+## Thank you!
+
+    </pre>
+    <div id="slideshow"></div>
+  </body>
+</html>
