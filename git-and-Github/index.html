@@ -257,6 +257,14 @@ class: center, middle
 
 ---
 
+几种提示：
+
+- On branch xxx
+- Untracked files:
+- Changes to be committed:
+
+---
+
 #命令列表
 
 - git init
@@ -264,7 +272,7 @@ class: center, middle
 - git clone
 - git remote add 
 - git add [-n]
-- git rm
+- git rm      把一个文件删除，并把它从git的仓库管理系统中移除
 - git commit -a -m "xxx"
 - git push origin master 
 - git pull
@@ -273,6 +281,11 @@ class: center, middle
 
 - git branch
 - git checkout [-b]
+
+- git reset HEAD <file>
+- git checkout <file>
+- git reset --hard HEAD
+
 - git merge
 - git diff
 - git log
