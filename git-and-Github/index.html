@@ -424,7 +424,7 @@ class: center, middle
 
 ---
 
-#认识 github
+#Try github
 
 ##演示注册
 
@@ -432,7 +432,7 @@ class: center, middle
 
 ---
 
-#认识 github
+#Try github
 
 ##新建repo
 
@@ -440,7 +440,7 @@ class: center, middle
 
 ---
 
-#认识 github
+#Try github
 
 ##生成 SSH Keys [Github - Help](https://help.github.com/articles/generating-ssh-keys#platform-windows)
 
@@ -453,6 +453,13 @@ class: center, middle
       clip < ~/.ssh/id_rsa.pub
 
 Account Settings -> SSH Keys -> Add SSH key -> 粘贴key
+
+---
+
+class: middle, center
+
+#现在我们有了远端仓库
+#再来认识一些相关的git命令
 
 ---
 
@@ -494,40 +501,100 @@ Account Settings -> SSH Keys -> Add SSH key -> 粘贴key
 
 ---
 
-#TODO:
+#git 命令
+
+.center.middle[
+
+##git clone &lt; repository &gt;
+
+克隆仓库。
+
+远端仓库的话，可以采用 HTTPS协议或SSH。
+
+]
 
 ---
 
-#命令列表
+#Try github
 
-- git init
-- git status
-- git clone
-- git remote add 
-- git add [-n]
-- git rm      把一个文件删除，并把它从git的仓库管理系统中移除
-- git commit -a -m "xxx"
-- git push origin master 
-- git pull
+##演示clone
 
-#进阶
+<img src="Data/github3.png" style="width:700px"></img>
 
-- git branch
-- git checkout [-b]
+---
 
-##恢复
-- git reset HEAD <file>
-- git checkout <file>
-- git reset --hard HEAD~<n>
-    git reset --mixed：此为默认方式，不带任何参数的git reset，即时这种方式，它回退到某个版本，只保留源码，回退commit和index信息
-    git reset --soft：回退到某个版本，只回退了commit的信息，不会恢复到index file一级。如果还要提交，直接commit即可
-    git reset  --hard：彻底回退到某个版本，本地的源码也会变为上一个版本的内容，此命令 慎用！
+#Try github
 
+##演示fork
 
+<img src="Data/github4.png" style="width:700px"></img>
+
+---
+
+#Try github
+
+##演示Pull Requests
+
+<img src="Data/github5.png" style="width:700px"></img>
+
+---
+
+#其他常用命令
+
+- git rm
 - git merge
 - git diff
-- git log
-- git tag <tag> <commit ID>
+- git tag &lt; tag &gt; &lt; commit ID &gt;
+
+---
+
+#其他常用命令
+
+##分支
+
+- git branch
+- git checkout -b
+
+---
+
+#其他常用命令
+
+##回滚
+
+- git reset HEAD &lt; file &gt;
+
+处于Changed状态(还没有staging)
+
+- git checkout &lt; file &gt;
+
+处于Staged状态(还没有Commit)
+
+---
+
+#其他常用命令
+
+##回滚Commits
+
+- git reset --hard HEAD~ &lt; n &gt;
+
+    git reset --mixed：此为默认方式，不带任何参数的git reset，即时这种方式，它回退到某个版本，只保留源码，回退commit和index信息
+
+    git reset --soft：回退到某个版本，只回退了commit的信息，不会恢复到index file一级。如果还要提交，直接commit即可
+    
+    git reset  --hard：彻底回退到某个版本，本地的源码也会变为上一个版本的内容，此命令 慎用！
+
+---
+
+#其他资料
+
+- [git cheat sheet](http://rogerdudler.github.io/git-guide/files/git_cheat_sheet.pdf)
+- [git - 简易指南](http://rogerdudler.github.io/git-guide/index.zh.html)
+
+这个slide的在线地址：
+
+http://oct.tclh123.com/slides/git-and-Github/
+
+我的github账号：[tclh123](https://github.com/tclh123)，欢迎follow~欢迎fork~
 
 ---
 
