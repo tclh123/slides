@@ -139,6 +139,13 @@ class: center, middle
 
 class: center, middle
 
+##没有什么高深的内容
+##只是想让大家会使用git&github进行基本的协作开发
+
+---
+
+class: center, middle
+
 ##git ≠ github
 
 ---
@@ -250,18 +257,244 @@ class: center, middle
   - 邮箱
 
         git config --global user.email "your_email@example.com"
+  
+  - 颜色
+        git config color.ui true
+]
+
+---
+
+#Have a try
+
+- git init
+- git status
+- git add .
+- git commit -a -m "xxx"
+- git log
+- git checkout &lt; commit &gt;
+
+---
+
+#认识 git
+
+- working dir
+- index(staging area)
+- HEAD(指向commit树中某处)
+
+---
+
+#认识 git
+
+##工作流
+
+![](Data/trees.png)
+
+---
+
+#认识 git
+
+##文件状态
+
+<!-- <img src="Data/filestate.gif" style="height:100px"></img> -->
+![](Data/filestate.gif)
+
+---
+
+#git 命令
+
+.center.middle[
+
+##git init
+
+创建git仓库
+
+将生成.git文件夹
 
 ]
 
 ---
 
----
+#git 命令
+
+.center.middle[
+
+##git status
+
+查看git当前状态，
 
 几种提示：
+    
+    # On branch master
 
-- On branch xxx
-- Untracked files:
-- Changes to be committed:
+    Untracked files:
+
+    Changes to be committed:
+
+]
+
+---
+
+#git 命令
+
+.center.middle[
+
+##git add &lt; filename &gt;
+
+将文件从working dir(untracked)，添加到index
+
+]
+
+---
+
+#git 命令
+
+.center.middle[
+
+##git commit [-a -m "xxx"]
+
+将文件从index(staging area)，提交到git dir（HEAD指向的commit）
+
+]
+
+---
+
+#git 命令
+
+.center.middle[
+
+##git log
+
+查看commit历史记录
+
+]
+
+---
+
+#git 命令
+
+.center.middle[
+
+##git checkout [&lt; branch &gt; or &lt; commit &gt; ]
+
+检出某次commit，或者branch（其实就是让HEAD指向那个commit节点）
+
+]
+
+---
+
+#认识 github
+
+.one-column[
+
+
+]
+
+---
+
+#认识 github
+
+.one-column[
+
+- 网站
+
+]
+
+---
+
+#认识 github
+
+.one-column[
+
+- 网站
+- 代码托管网站（共享虚拟主机）
+
+]
+
+---
+
+#认识 github
+
+.one-column[
+
+- 网站
+- 代码托管网站（共享虚拟主机）
+- 使用git版本控制系统
+
+]
+
+---
+
+#认识 github
+
+##演示注册
+
+<img src="Data/github.png" style="height:400px"></img>
+
+---
+
+#认识 github
+
+##新建repo
+
+<img src="Data/github2.png" style="height:400px"></img>
+
+---
+
+#认识 github
+
+##生成 SSH Keys [Github - Help](https://help.github.com/articles/generating-ssh-keys#platform-windows)
+
+- 生成一个新的SSH Key
+      
+      ssh-keygen -t rsa -C "your_email@example.com"
+
+- 将新的SSH Key添加到github
+
+      clip < ~/.ssh/id_rsa.pub
+
+Account Settings -> SSH Keys -> Add SSH key -> 粘贴key
+
+---
+
+#git 命令
+
+.center.middle[
+
+##git remote add
+
+添加远程仓库地址
+
+]
+
+---
+
+#git 命令
+
+.center.middle[
+
+##git push
+
+##git push -u origin master
+
+推送到远程仓库
+
+]
+
+---
+
+#git 命令
+
+.center.middle[
+
+##git pull
+
+在你的工作目录中 获取（fetch） 并 合并（merge） 远端的改动。
+
+]
+
+---
+
+#TODO:
 
 ---
 
