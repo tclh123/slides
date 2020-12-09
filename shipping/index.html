@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shipping</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script src="Js/remark.min.js" type="text/javascript">
+      {"highlightStyle": "monokai"}
+    </script>
+    <script type="text/javascript">
+      var hljs = remark.highlighter.engine();
+    </script>
+    <style type="text/css" media="screen">
+      /*@import url(http://fonts.googleapis.com/css?family=Ubuntu+Condensed);*/
+
+      body { 
+        font-family: 'Ubuntu Condensed', 'Droid Serif', 'sans-serif'; 
+        font-size: 32px;
+      }
+/*      h1, h2, h3 {
+        font-family: 'Ubuntu Condensed', 'Yanone Kaffeesatz', 'sans-serif';
+        font-weight: 400;
+        margin-bottom: 0;
+      }*/
+/*      h1 { font-size: 2.4em; }
+      h2 { font-size: 2em; }
+      h3 { font-size: 1.6em; }*/
+
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+      }
+      li {
+        margin-top: 1em;
+      }
+      li p { line-height: 1.25em; }
+      .red { color: #fa0000; }
+      .large2 { font-size: 1.5em; }
+      .large { font-size: 2em; }
+      a, a > code {
+        /*color: rgb(249, 38, 114);*/
+        color: #41C8F0; /*blue*/
+        text-decoration: none;
+      }
+      code {
+        -moz-border-radius: 5px;
+        -web-border-radius: 5px;
+        background: #e7e8e2;
+        border-radius: 5px;
+      }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content { 
+/*        background: url(http://romnes.github.io/images/github.png) no-repeat top right; */
+        padding: 1em 3em;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #777872;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        color: #777;
+        width: 30%;
+        height: 92%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column {
+        width: 75%;
+        float: right;
+        padding-top: 2em;
+      }
+
+      /* Color */
+
+      .red    { color: #FF4943; }
+      .gray   { color: #787878; }
+      .green  { color: #87A558; }
+      .blue   { color: #41C8F0; }
+      .yellow { color: #DBEC62; }
+
+      /**/
+
+      .one-column {
+        color: #777;
+        /*width: 20%;*/
+        /*height: 92%;*/
+        /*float: left;*/
+      }
+        .one-column li:last-of-type, .one-column li:last-child {
+          font-size: 1.5em;
+          color: #000;
+        }
+
+      .padding-top {
+        padding-top: 2em;
+      }        
+
+    </style>    
+
+  </head>
+  <body>
+    <!-- 
+    Shipping
+     -->
+    <pre id="source">
+
+class: center, middle
+
+# .red[Shipping]
+
+.left.footnote[Harry]
+
+---
+
+# Agenda
+
+- What do we ship?
+- How do we ship?
+- Why is it not perfect?
+
+---
+
+# What do we ship?
+
+- docker images
+- use Git hashes for image tags
+
+---
+
+# How do we run the docker images?
+
+- command args
+- resource requests/limits for memory/CPU
+- configs
+- associated storage
+- environment variables
+- ...
+
+---
+
+# What do we ship?
+
+- Kubernetes deployments/statefulsets
+- Kubernetes configmaps/secrets
+- `docker pull/create/rename/stop/start` by crane
+    - take care of docker volumes
+
+---
+
+# Native k8s YAML file
+
+- hard to write
+- redundant
+- no objects management
+
+---
+
+# What do we ship? - Kubernetes
+
+- Helm charts
+- templating (e.g. `hanson-generic` chart)
+- manage k8s objects
+
+---
+
+# Helm
+
+<img src="Data/helm1.png" style="width:700px"></img>
+
+---
+
+# What do we ship? - Kubernetes
+
+- Flux
+- continuous delivery solution for Kubernetes
+- GitOps
+- we use it with `helm-operator`
+
+---
+
+# Flux
+
+<img src="Data/flux1.png" style="width:700px"></img>
+
+---
+
+# Flux with helm
+
+<img src="Data/flux2.png" style="width:500px"></img>
+
+---
+
+# What do we ship? - Crane
+
+- docker images
+- config
+    - production_config -> `/etc/hanson_cfg`
+    - other host provisioning
+- db migrations
+
+---
+
+# How do we ship?
+
+- k8s, `deploy_apps`
+    - clone production_config
+    - generate HelmRelease custom resources YAMLs
+    - push to k8s_flux_production/etl/ci/staging
+- snowflake hosts, `crane`
+
+---
+
+# How do we ship? - k8s
+
+```bash
+# ship scenarios
+deploy_apps charts -s shards -v {gitsha}
+deploy_apps charts -s config -v whatever
+
+# ship individual apps
+deploy_apps charts -a smarkets-maker -v {gitsha} -c production
+deploy_apps charts -a hanson-cfg-configmap -v whatever -c production
+
+# ship unmerged yaml changes
+deploy_apps charts -a smarkets-maker -v {gitsha} -c production --apps-dir `pwd`/k8s
+
+# prerelease
+deploy_apps charts -a smarkets-maker -v {gitsha} -c production --prerelease
+deploy_apps charts -a smarkets-maker -v {gitsha} -c production --un-prerelease
+
+# partition
+deploy_apps charts -a smarkets-maker -v {gitsha} -c production --partition 0.5
+deploy_apps charts -a smarkets-maker -v {gitsha} -c production --partition 1.0
+```
+
+---
+
+# How do we ship? - k8s
+
+production_config, apps defination YAML
+
+```bash
+name: {application name}
+chart: {helm chart name}
+chart_version: {helm_chart_version}
+chart_repo: {helm_chart_repo}
+description: {short human readable app description}
+version: {not used}
+namespace: {k8s namespace}
+cluster: {k8s cluster name}
+check_health: {check health flag}
+health_endpoints:
+ - {http/tcp endpoints list}
+values:
+  {helm_chart_values}
+```
+
+---
+
+# How do we ship? - k8s
+
+deploy_apps built-in variables templating
+
+- tag: ${version}
+- deployid: ${deployid}
+- name: ${appname}
+    - takes `smarkets-broker` from `smarkets-broker-1.yaml`
+- `bin/smarkets-broker --shard-number ${shard_id}`
+    - takes `1` from `smarkets-broker-1.yaml`
+
+---
+
+# How do we ship? - crane
+
+crane is based on fabric,
+which is a simple package for building configuration management tool.
+
+crane is just a tool providing CLI to python functions.
+
+---
+
+# How do we ship? - crane
+
+```
+# ship all (ship_code will automatically check if there are db migrations)
+crane production:core hanson.ship_code:{gitsha}
+
+# ship config (/etc/hanson_cfg)
+crane production:core hanson.ship_config:{gitsha}
+
+# db migration
+crane dev:local db.migrate_hanson:{gitsha}
+```
+
+---
+
+# Why is it not perfect?
+
+- everyone run tools locally
+    - different environments
+    - need to distribute the tools
+- error handling is not good
+- not easy to ship applications in some orders
+    - follow dependencies
+
+---
+
+# Why is it not perfect? -
+
+- applications are too implicit
+    - what are the most recent shipped applications?
+- not application-oriented, informations are spread everywhere
+- not easy to hook with other systems
+    - during our ship, some alerts should be scheduled down
+
+---
+
+name: last-page
+class: center middle
+
+## Thank you!
+
+    </pre>
+    <div id="slideshow"></div>
+  </body>
+</html>
