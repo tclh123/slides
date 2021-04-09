@@ -4,7 +4,7 @@
     <title>TimescaleDB</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <script src="Js/remark.min.js" type="text/javascript">
-      {"highlightStyle": "monokai", "ratio": "16:9"}
+      {"highlightStyle": "monokai", "ratio": "16:10"}
     </script>
     <script type="text/javascript">
       var hljs = remark.highlighter.engine();
@@ -378,7 +378,7 @@ Options: `compress_segmentby`, `compress_orderby`
 Chunk > segment > compressed columnar
 
 - Each segment of data should contain at least 100 rows in each chunk.
-- B-tree indexes is built over each `segmentby` column.
+- B-tree indexes are built over each `segmentby` column.
 - Indexes on the hypertable are ignored
 
 ---
